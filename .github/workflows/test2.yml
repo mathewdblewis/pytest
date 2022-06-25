@@ -1,5 +1,5 @@
 
-name: get python version
+name: create artifact
 on:
   workflow_dispatch:
 jobs:
