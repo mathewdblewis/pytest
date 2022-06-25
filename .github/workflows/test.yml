@@ -1,10 +1,11 @@
 ---
-  - name: "Playing with Ansible and Git"
-    hosts: localhost
-    connection: local 
-    tasks:
-      shell: "python3 -V"
-      register: "output"
 
-    - debug: var=output.stdout_lines
+name: get python version
+on:
+  workflow_dispatch:
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+    - run: python3 -V
     
